@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.home-header {
+  position: relative;
+}
+
+.text-over {
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+  transform: translate(-50%);
+}
