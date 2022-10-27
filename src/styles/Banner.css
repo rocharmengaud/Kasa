@@ -1,11 +1,15 @@
 .home-banner {
   position: relative;
-  height: 230px;
 }
 
 .text-over {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
+  width: 100%;
+  top: 25%;
+  left: 0;
+  transform: translate(10%);
+}
+
+p {
+  color: #ff6060;
 }
