@@ -1,8 +1,8 @@
-import Home from './components/Home';
+import Home from './pages/Home';
 import { Routes, Route } from 'react-router-dom';
-import FicheLogement from './components/FicheLogement';
-import Error404 from './components/404';
-import APropos from './components/APropos';
+import FicheLogement from './pages/FicheLogement';
+import Error404 from './pages/404';
+import APropos from './pages/APropos';
 
 function App() {
   return (
