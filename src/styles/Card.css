@@ -1,7 +1,7 @@
-.card {
-  border-color: #ff6060;
+.card-title {
+  font-size: 17px;
 }
 
-.card-info {
+.card-location {
   color: #ff6060;
 }
