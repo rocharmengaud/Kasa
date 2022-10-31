@@ -13,7 +13,7 @@ function Homepage() {
       <div className="content lg:px-32 px-6">
         <Navbar />
         <Banner />
-        <div className="box-container lg:border-2 lg:p-8 lg:bg-gray-200 lg:rounded-3xl">
+        <div className="box-container lg:border-2 lg:p-8 lg:bg-gray-200 lg:rounded-3xl lg:mb-6">
           <div className="cards-container lg:grid lg:grid-cols-3 lg:gap-8 flex flex-col">
             <Card data={LogementsData} />
           </div>
