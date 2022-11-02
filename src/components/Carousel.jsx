@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
-import LogementsData from '../data/Logements.json';
-
 import '../styles/Carousel.css';
 
 export default function Carousel({ slides }) {
@@ -26,10 +24,10 @@ export default function Carousel({ slides }) {
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
 
-      {LogementsData.map((slide, index) => {
+      {slides.map((slide, index) => {
         return (
           <div className={index === current ? 'slide-active py-6' : 'slide'} key={index}>
-            {index === current && <img className="image lg:h-[38rem]" src={slide.cover} alt="" key={slide.id} />}
+            {index === current && <img className="image lg:h-[38rem]" src={slide} alt="" key={slide.id} />}
           </div>
         );
       })}
