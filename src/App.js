@@ -1,5 +1,6 @@
-import Home from './pages/Home';
 import { Routes, Route } from 'react-router-dom';
+
+import Home from './pages/Home';
 import FicheLogement from './pages/FicheLogement';
 import Error404 from './pages/404';
 import APropos from './pages/APropos';
