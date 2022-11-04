@@ -19,7 +19,9 @@ export default function Rating({ data }) {
         </div>
         <div className="profile flex items-center gap-2">
           <div className="profile-name">{data.name}</div>
-          <div className="profile-picture bg-slate-200 rounded-full w-[2rem] h-[2rem]"></div>
+          <div className="profile-picture">
+            <img className="w-[5rem] h-[5rem] rounded-full" src={data.picture} alt={data.name} />
+          </div>
         </div>
       </div>
     </>
