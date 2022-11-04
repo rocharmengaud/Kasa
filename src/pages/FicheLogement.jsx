@@ -33,7 +33,7 @@ export default function FicheLogement() {
               <div className="logement-title font-semibold">{logement.title}</div>
               <div className="logement-location">{logement.location}</div>
             </div>
-            <Tags />
+            <Tags data={LogementsUpdate[0].tags} />
             {/* ici on se positionne ce qui a été filtré dans LogementsUpdate et on lui donne .host pour rentrer dans le tableau correspondant */}
             {/* on écris data ici car le composant rating prends en propriété data */}
             <Rating data={LogementsUpdate[0].host} />
