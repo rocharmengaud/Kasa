@@ -12,20 +12,18 @@ import '../styles/FicheLogement.css';
 
 export default function FicheLogement() {
   const { id } = useParams();
-  console.log(id);
 
   // on se positionne sur l'id de la page actuelle
-  const LogementsUpdate = LogementsData.filter((el) => {
+  const LogementID = LogementsData.filter((el) => {
     return el.id === id;
   });
-  console.log(LogementsUpdate);
 
-  const dataLogement = LogementsUpdate;
+  const dataLogement = LogementID;
 
   return (
     <div className="content lg:px-32 px-6">
       <Navbar />
-      <Carousel slides={LogementsUpdate[0].pictures} />
+      <Carousel slides={LogementID[0].pictures} />
       {dataLogement.map((logement, index) => {
         return (
           <div className="logement-content lg:bg-white lg:pt-6 lg:relative" key={index}>
@@ -33,10 +31,10 @@ export default function FicheLogement() {
               <div className="logement-title font-semibold">{logement.title}</div>
               <div className="logement-location">{logement.location}</div>
             </div>
-            <Tags data={LogementsUpdate[0].tags} />
-            {/* ici on se positionne ce qui a été filtré dans LogementsUpdate et on lui donne .host pour rentrer dans le tableau correspondant */}
+            <Tags data={LogementID[0].tags} />
+            {/* ici on se positionne ce qui a été filtré dans LogementID et on lui donne .host pour rentrer dans le tableau correspondant */}
             {/* on écris data ici car le composant rating prends en propriété data */}
-            <Rating data={LogementsUpdate[0].host} />
+            <Rating data={LogementID[0].host} />
           </div>
         );
       })}
