@@ -1,11 +1,7 @@
-.image {
-  border-radius: 10px;
-}
-
 .right-arrow {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 1rem;
   font-size: 1rem;
   color: black;
   cursor: pointer;
@@ -15,7 +11,7 @@
 .left-arrow {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 1rem;
   font-size: 1rem;
   color: black;
   cursor: pointer;

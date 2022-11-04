@@ -14,6 +14,7 @@ export default function FicheLogement() {
   const { id } = useParams();
   console.log(id);
 
+  // on se positionne sur l'id de la page actuelle
   const LogementsUpdate = LogementsData.filter((el) => {
     return el.id === id;
   });
@@ -27,7 +28,7 @@ export default function FicheLogement() {
       <Carousel slides={LogementsUpdate[0].pictures} />
       {dataLogement.map((logement, index) => {
         return (
-          <div className="logement-content lg:bg-white lg:pt-6" key={index}>
+          <div className="logement-content lg:bg-white lg:pt-6 lg:relative" key={index}>
             <div className="logement-info flex flex-col gap-1">
               <div className="logement-title font-semibold">{logement.title}</div>
               <div className="logement-location">{logement.location}</div>

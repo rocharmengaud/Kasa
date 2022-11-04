@@ -3,7 +3,7 @@ import { BsStar } from 'react-icons/bs';
 
 export default function Rating() {
   return (
-    <div className="rating lg:flex-col-reverse lg:items-end lg:gap-6 flex items-center justify-between py-4">
+    <div className="rating lg:flex-col-reverse lg:items-end lg:gap-6 lg:absolute lg:top-0 lg:right-0 flex items-center justify-between py-4">
       <div className="stars flex gap-1">
         <BsStar size="1rem" />
         <BsStar size="1rem" />
