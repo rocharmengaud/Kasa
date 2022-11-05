@@ -9,7 +9,7 @@ export default function Tags({ data }) {
         <div className="tag max-w-fit rounded-xl flex gap-1 text-center border">
           {data.map((value, index) => {
             return (
-              <div className="tag-text1 px-8 text-white" key={value.id}>
+              <div className="tag-text1 px-8 text-white" key={index}>
                 {value}
               </div>
             );
