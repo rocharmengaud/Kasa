@@ -31,9 +31,9 @@ export default function FicheLogement() {
               <div className="logement-title font-semibold">{logement.title}</div>
               <div className="logement-location">{logement.location}</div>
             </div>
+            {/* ici on se positionne ce qui a été filtré dans LogementID et on lui donne .tags pour rentrer dans le tableau correspondant */}
+            {/* on écris data ici car le composant tags prends en propriété data */}
             <Tags data={LogementID[0].tags} />
-            {/* ici on se positionne ce qui a été filtré dans LogementID et on lui donne .host pour rentrer dans le tableau correspondant */}
-            {/* on écris data ici car le composant rating prends en propriété data */}
             <Rating data={LogementID[0].host} />
           </div>
         );
