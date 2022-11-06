@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import Rating from '../components/Rating';
 import Tags from '../components/Tags';
 import Footer from '../components/Footer';
+import Dropdown from '../components/Dropdown';
 
 import LogementsData from '../data/Logements.json';
 
@@ -15,31 +16,33 @@ export default function FicheLogement() {
   const { id } = useParams();
 
   // on se positionne sur l'id de la page actuelle
-  const LogementID = LogementsData.filter((el) => {
+  const currentLogement = LogementsData.find((el) => {
     return el.id === id;
   });
 
-  const dataLogement = LogementID;
+  // const dataLogement = currentLogement;
 
   return (
     <>
       <div className="content lg:px-32 px-6">
         <Navbar />
-        <Carousel slides={LogementID[0].pictures} />
-        {dataLogement.map((logement, index) => {
-          return (
-            <div className="logement-content lg:bg-white lg:pt-6 lg:relative" key={index}>
-              <div className="logement-info flex flex-col gap-1">
-                <div className="logement-title font-semibold">{logement.title}</div>
-                <div className="logement-location">{logement.location}</div>
-              </div>
-              {/* ici on se positionne ce qui a été filtré dans LogementID et on lui donne .tags pour rentrer dans le tableau correspondant */}
-              {/* on écris data ici car le composant tags prends en propriété data */}
-              <Tags data={LogementID[0].tags} />
-              <Rating data={LogementID[0].host} />
-            </div>
-          );
-        })}
+        <Carousel slides={currentLogement.pictures} />
+        <div className="logement-content lg:bg-white lg:pt-6 lg:relative">
+          <div className="logement-info flex flex-col gap-1">
+            <div className="logement-title font-semibold">{currentLogement.title}</div>
+            <div className="logement-location">{currentLogement.location}</div>
+          </div>
+          <Tags data={currentLogement.tags} />
+          <Rating data={currentLogement.host} />
+        </div>
+        <Dropdown title={'Description'}>{currentLogement.description}</Dropdown>
+        <Dropdown title={'Equipements'}>
+          <div className="flex flex-col">
+            {currentLogement.equipments.map((equipment, index) => {
+              return <span key={index}>{equipment}</span>;
+            })}
+          </div>
+        </Dropdown>
       </div>
       <Footer />
     </>

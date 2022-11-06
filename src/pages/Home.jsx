@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
 import '../styles/Global.css';
 import '../styles/Navbar.css';
 
-import LogementsData from '../data/Logements.json';
+import Logements from '../data/Logements.json';
 function Homepage() {
   return (
     <>
@@ -15,7 +15,9 @@ function Homepage() {
         <Banner />
         <div className="box-container lg:border-2 lg:p-8 lg:bg-gray-200 lg:rounded-3xl lg:mb-6">
           <div className="cards-container lg:grid lg:grid-cols-3 lg:gap-8 flex flex-col">
-            <Card data={LogementsData} />
+            {Logements.map((logement, index) => (
+              <Card {...logement} key={logement.id} />
+            ))}
           </div>
         </div>
       </div>

@@ -13,9 +13,17 @@ export default function APropos() {
     <>
       <div className="content lg:px-32 px-6">
         <Navbar />
-        <Dropdown data={Apropos[0]} />
+        {Apropos.map((apropo, index) => (
+          <Dropdown title={apropo.title} key={apropo.id}>
+            {/* ici on passe des children au composant dropdown */}
+            {/* c'est pour ca que le composant s'ouvre et se ferme en deux balises */}
+            {apropo.description}
+          </Dropdown>
+        ))}
       </div>
-      <Footer />
+      <div className="footer">
+        <Footer />
+      </div>
     </>
   );
 }
