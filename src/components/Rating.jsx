@@ -3,7 +3,7 @@ import { BsStar } from 'react-icons/bs';
 
 import '../styles/FicheLogement.css';
 
-export default function Rating({ data }) {
+export default function Rating(data) {
   return (
     <>
       <div
@@ -17,7 +17,7 @@ export default function Rating({ data }) {
           <BsStar size="1rem" />
           <BsStar size="1rem" />
         </div>
-        <div className="profile flex items-center gap-2">
+        <div className="profile flex items-center gap-4">
           <div className="profile-name">{data.name}</div>
           <div className="profile-picture">
             <img className="w-[4rem] h-[4rem] rounded-full" src={data.picture} alt={data.name} />

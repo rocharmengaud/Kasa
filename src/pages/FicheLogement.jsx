@@ -20,8 +20,6 @@ export default function FicheLogement() {
     return el.id === id;
   });
 
-  // const dataLogement = currentLogement;
-
   return (
     <>
       <div className="content lg:px-32 px-6">
@@ -33,16 +31,22 @@ export default function FicheLogement() {
             <div className="logement-location">{currentLogement.location}</div>
           </div>
           <Tags data={currentLogement.tags} />
-          <Rating data={currentLogement.host} />
+          <Rating {...currentLogement.host} />
         </div>
-        <Dropdown title={'Description'}>{currentLogement.description}</Dropdown>
-        <Dropdown title={'Equipements'}>
-          <div className="flex flex-col">
-            {currentLogement.equipments.map((equipment, index) => {
-              return <span key={index}>{equipment}</span>;
-            })}
+        <div className="dropdowns-container lg:flex-row lg:pt-6 lg:justify-between lg:gap-6 flex flex-col gap-6 pb-6">
+          <div className="dropdown-container w-full">
+            <Dropdown title={'Description'}>{currentLogement.description}</Dropdown>
           </div>
-        </Dropdown>
+          <div className="dropdown-container w-full">
+            <Dropdown title={'Equipements'}>
+              <div className="flex flex-col">
+                {currentLogement.equipments.map((equipment, index) => {
+                  return <span key={index}>{equipment}</span>;
+                })}
+              </div>
+            </Dropdown>
+          </div>
+        </div>
       </div>
       <Footer />
     </>
