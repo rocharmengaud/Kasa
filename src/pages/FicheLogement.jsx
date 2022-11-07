@@ -31,7 +31,7 @@ export default function FicheLogement() {
             <div className="logement-location">{currentLogement.location}</div>
           </div>
           <Tags data={currentLogement.tags} />
-          <Rating {...currentLogement.host} />
+          <Rating name={currentLogement.host.name} picture={currentLogement.host.picture} rating={currentLogement.rating} />
         </div>
         <div className="dropdowns-container lg:flex-row lg:pt-6 lg:justify-between lg:gap-6 flex flex-col gap-6 pb-6">
           <div className="dropdown-container w-full">

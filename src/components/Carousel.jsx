@@ -3,9 +3,9 @@ import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from 'react-icons/fa';
 
 import '../styles/Carousel.css';
 
-export default function Carousel({ slides }) {
+export default function Carousel(props) {
   const [current, setCurrent] = useState(0);
-  const length = slides.length;
+  const length = props.slides.length;
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -18,7 +18,7 @@ export default function Carousel({ slides }) {
   console.log(current);
 
   // verification de si l'array est vide
-  if (!Array.isArray(slides) || slides.length <= 0) {
+  if (!Array.isArray(props.slides) || props.slides.length <= 0) {
     return null;
   }
 
@@ -27,10 +27,10 @@ export default function Carousel({ slides }) {
       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
 
-      {slides.map((slide, index) => {
+      {props.slides.map((slide, index) => {
         return (
           <div className={index === current ? 'slide-active py-6' : 'slide'} key={index}>
-            {index === current && <img className="image lg:h-[38rem] lg:w-[103rem] object-cover rounded-3xl" src={slide} alt="" key={slide.id} />}
+            {index === current && <img className="image lg:h-[38rem] lg:w-[103rem] object-cover rounded-3xl" src={slide} alt="" />}
           </div>
         );
       })}

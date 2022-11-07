@@ -7,6 +7,8 @@ import Banner from '../components/Banner';
 
 import Apropos from '../data/Apropos.json';
 
+import Mountain from '../assets/mountain.png';
+
 import '../styles/Apropos.css';
 
 export default function APropos() {
@@ -14,7 +16,7 @@ export default function APropos() {
     <>
       <div className="content lg:px-32 px-6">
         <Navbar />
-        <Banner />
+        <Banner imgSrc={Mountain} />
         <div className="dropdowns-container flex flex-col gap-6">
           {Apropos.map((propos, index) => (
             <Dropdown title={propos.title} key={propos.id}>
