@@ -16,11 +16,11 @@ export default function APropos() {
         <Navbar />
         <Banner />
         <div className="dropdowns-container flex flex-col gap-6">
-          {Apropos.map((apropo, index) => (
-            <Dropdown title={apropo.title} key={apropo.id}>
+          {Apropos.map((propos, index) => (
+            <Dropdown title={propos.title} key={propos.id}>
               {/* ici on passe des children au composant dropdown */}
               {/* c'est pour ca que le composant s'ouvre et se ferme en deux balises */}
-              {apropo.description}
+              {propos.description}
             </Dropdown>
           ))}
         </div>

@@ -6,7 +6,7 @@ export default function Banner() {
   return (
     <div className="home-banner pb-6">
       <img
-        className="island rounded-xl brightness-90 lg:brightness-75 lg:object-right-bottom h-28 object-cover object-right-top w-full"
+        className="image rounded-xl brightness-90 lg:brightness-75 lg:object-right-bottom h-28 object-cover object-right-top w-full"
         src={Island}
         alt="Island landscape"
       ></img>
