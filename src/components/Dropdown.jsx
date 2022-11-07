@@ -12,7 +12,7 @@ export default function Dropdown(props) {
         {props.title}
         <RiArrowDropDownLine className="dropdown-arrow text-[40px]" />
       </div>
-      {/* .children ici par exemple est reconnu l38 fichelogement entre les deux balises dropdown*/}
+      {/* .children ici est reconnu l38 fichelogement entre les deux balises dropdown*/}
       {isActive && <div className="dropdown-value px-4 py-2 bg-gray-200">{props.children}</div>}
     </div>
   );
