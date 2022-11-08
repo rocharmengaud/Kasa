@@ -12,8 +12,8 @@ export default function Banner(props) {
       {/* && correspond a un if dans le jsx */}
       {/* on appelle ce code du conditionnal rendering */}
       {props.description && (
-        <div className="text-over">
-          <h1 className="text-2xl font-medium leading-7 text-white">{props.description}</h1>
+        <div className="text-over left-6">
+          <h1 className="lg:text-center text-2xl font-medium leading-7 text-white">{props.description}</h1>
         </div>
       )}
     </div>

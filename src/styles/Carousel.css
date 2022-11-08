@@ -2,8 +2,6 @@
   position: absolute;
   top: 50%;
   right: 1rem;
-  font-size: 1rem;
-  color: black;
   cursor: pointer;
   z-index: 10;
 }
@@ -12,19 +10,6 @@
   position: absolute;
   top: 50%;
   left: 1rem;
-  font-size: 1rem;
-  color: black;
   cursor: pointer;
   z-index: 10;
 }
-
-/* .slide {
-  opacity: 0;
-  transition-duration: 1s ease;
-}
-
-.slide-active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08);
-} */

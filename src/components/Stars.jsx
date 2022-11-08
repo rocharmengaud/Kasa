@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { StarIcon } from './StarIcon';
+import { StarIcon } from '../assets/StarIcon';
 
 const Stars = (props) => (
-  <div className="stars flex gap-1">
+  <div className="stars flex gap-1 h-[20px] lg:h-[30px]">
     {Array(5)
       .fill(0)
       .map((value, index) => {

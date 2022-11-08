@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="kasa-logo flex justify-center pb-4">
         <img className="kasa-logo w-36 h-12" src={bnw_logo} alt="Kasa logo"></img>
       </div>
-      <div className="copyright text-center text-white">© 2020 Kasa. All rights reserved</div>
+      <div className="copyright pb-6 text-center text-white">© 2020 Kasa. All rights reserved</div>
     </footer>
   );
 }
