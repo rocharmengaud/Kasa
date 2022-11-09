@@ -16,7 +16,7 @@ export default function Error404() {
         <div className="big-text hover:underline-offset-2 hover:underline font-extralight lg:pt-36 pt-24 text-center">
           <Link to="/">Retourner sur la page d'accueil</Link>
         </div>
-        <div className="footer">
+        <div className="footer absolute bottom-0 left-0 right-0">
           <Footer />
         </div>
       </div>
