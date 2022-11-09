@@ -9,12 +9,10 @@ import Apropos from '../data/Apropos.json';
 
 import Mountain from '../assets/mountain.png';
 
-import '../styles/Apropos.css';
-
 export default function APropos() {
   return (
     <>
-      <div className="content lg:px-32 px-6">
+      <div className="content lg:px-32 px-6 pb-10">
         <Navbar />
         <Banner imgSrc={Mountain} />
         <div className="dropdowns-container flex flex-col gap-6">
@@ -27,7 +25,7 @@ export default function APropos() {
           ))}
         </div>
       </div>
-      <div className="footer">
+      <div className="footer lg:absolute bottom-0 left-0 right-0">
         <Footer />
       </div>
     </>
