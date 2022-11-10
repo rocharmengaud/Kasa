@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 import Island from '../assets/bg_img_1.png';
 
 import '../styles/Global.css';
-import '../styles/Navbar.css';
 
 import Logements from '../data/Logements.json';
 function Homepage() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Navigate } from 'react-router-dom';
 
 import Carousel from '../components/Carousel';
 import Navbar from '../components/Navbar';
@@ -10,8 +10,6 @@ import Dropdown from '../components/Dropdown';
 
 import LogementsData from '../data/Logements.json';
 
-import '../styles/FicheLogement.css';
-
 export default function FicheLogement() {
   const { id } = useParams();
 
@@ -20,6 +18,12 @@ export default function FicheLogement() {
     return el.id === id;
   });
 
+  // Condition pour renvoyer l'utilisateur sur la page 404 si le logement n'as pas été trouvé
+  // L'ordre de cette condition ici est importante pour déterminer si le logement a été trouvé
+  if (!currentLogement) {
+    return <Navigate to="/error-404" />;
+  }
+
   return (
     <>
       <div className="content lg:px-32 px-6">
@@ -27,8 +31,8 @@ export default function FicheLogement() {
         <Carousel slides={currentLogement.pictures} />
         <div className="logement-content lg:bg-white lg:pt-6 lg:relative">
           <div className="logement-info flex flex-col gap-1">
-            <div className="logement-title font-semibold">{currentLogement.title}</div>
-            <div className="logement-location">{currentLogement.location}</div>
+            <div className="logement-title font-semibold text-[#ff6060] text-[17px]">{currentLogement.title}</div>
+            <div className="logement-location text-[#ff6060]">{currentLogement.location}</div>
           </div>
           <Tags data={currentLogement.tags} />
           <Rating name={currentLogement.host.name} picture={currentLogement.host.picture} rating={currentLogement.rating} />

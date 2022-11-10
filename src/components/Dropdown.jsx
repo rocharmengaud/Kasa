@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { RiArrowDropDownLine } from 'react-icons/ri';
 
-import '../styles/Dropdown.css';
-
 export default function Dropdown(props) {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <div className="dropdown">
-      <div className="dropdown-btn flex items-center justify-between px-4 py-1 text-white rounded-md" onClick={() => setIsActive(!isActive)}>
+      <div
+        className="dropdown-btn bg-[#ff6060] flex items-center justify-between px-4 py-1 text-white rounded-md"
+        onClick={() => setIsActive(!isActive)}
+      >
         {props.title}
         <RiArrowDropDownLine className="dropdown-arrow text-[40px] cursor-pointer" />
       </div>

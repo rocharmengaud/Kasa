@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
 
-import '../styles/Carousel.css';
-
 export default function Carousel(props) {
   const [current, setCurrent] = useState(0);
   const length = props.slides.length;
@@ -22,8 +20,16 @@ export default function Carousel(props) {
 
   return (
     <div className="carousel relative flex items-center justify-center w-full">
-      <SlArrowLeft className="left-arrow" size={40} color="#fff" onClick={prevSlide} />
-      <SlArrowRight className="right-arrow" size={40} color="#fff" onClick={nextSlide} />
+      <SlArrowLeft
+        className="left-arrow w-[2rem] h-[2rem] lg:w-[5rem] lg:h-[5rem] absolute top-1/2 left-[1rem] cursor-pointer z-10"
+        color="#fff"
+        onClick={prevSlide}
+      />
+      <SlArrowRight
+        className="right-arrow w-[2rem] h-[2rem] lg:w-[5rem] lg:h-[5rem] absolute top-1/2 right-[1rem] cursor-pointer z-10"
+        color="#fff"
+        onClick={nextSlide}
+      />
       {props.slides.map((slide, index) => {
         return (
           <div className={index === current ? 'slide-active pb-4' : 'slide'} key={index}>

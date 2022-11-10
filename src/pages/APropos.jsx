@@ -25,7 +25,7 @@ export default function APropos() {
           ))}
         </div>
       </div>
-      <div className="footer lg:absolute bottom-0 left-0 right-0">
+      <div className="footer">
         <Footer />
       </div>
     </>

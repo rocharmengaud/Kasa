@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../styles/Tags.css';
-
 export default function Tags({ data }) {
   return (
     <>
@@ -9,7 +7,7 @@ export default function Tags({ data }) {
         <div className="flex flex-wrap gap-3 text-center">
           {data.map((value, index) => {
             return (
-              <div className="tag tag-text1 px-6 text-white rounded-md" key={index}>
+              <div className="tag tag-text1 px-6 text-white rounded-md bg-[#ff6060]" key={index}>
                 {value}
               </div>
             );

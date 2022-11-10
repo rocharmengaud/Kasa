@@ -6,3 +6,17 @@
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Pour permettre au footer de rester en bas de la page */
+.App {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

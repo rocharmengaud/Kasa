@@ -1,5 +1,4 @@
 import React from 'react';
-import '../styles/FicheLogement.css';
 import Stars from './Stars';
 
 export default function Rating(props) {
