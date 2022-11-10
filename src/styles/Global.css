@@ -13,7 +13,7 @@ body,
   height: 100%;
 }
 
-/* Pour permettre au footer de rester en bas de la page */
+/* Pour permettre au footer de rester en bas de la page même quand il y a peu de contenu*/
 .App {
   min-height: 100%;
   display: flex;

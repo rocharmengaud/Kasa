@@ -21,12 +21,12 @@ export default function Carousel(props) {
   return (
     <div className="carousel relative flex items-center justify-center w-full">
       <SlArrowLeft
-        className="left-arrow w-[2rem] h-[2rem] lg:w-[5rem] lg:h-[5rem] absolute top-1/2 left-[1rem] cursor-pointer z-10"
+        className="left-arrow w-[2rem] h-[2rem] lg:w-[4rem] lg:h-[4rem] absolute top-1/2 left-[1rem] cursor-pointer z-10"
         color="#fff"
         onClick={prevSlide}
       />
       <SlArrowRight
-        className="right-arrow w-[2rem] h-[2rem] lg:w-[5rem] lg:h-[5rem] absolute top-1/2 right-[1rem] cursor-pointer z-10"
+        className="right-arrow w-[2rem] h-[2rem] lg:w-[4rem] lg:h-[4rem] absolute top-1/2 right-[1rem] cursor-pointer z-10"
         color="#fff"
         onClick={nextSlide}
       />
