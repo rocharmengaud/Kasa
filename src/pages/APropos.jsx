@@ -19,7 +19,7 @@ export default function APropos() {
           {Apropos.map((propos, index) => (
             <Dropdown title={propos.title} key={propos.id}>
               {/* ici on passe des children au composant dropdown */}
-              {/* c'est pour ca que le composant s'ouvre et se ferme en deux balises */}
+              {/* c'est pour ca que le composant s'ouvre et se ferme en deux balises l21 à l24*/}
               {propos.description}
             </Dropdown>
           ))}

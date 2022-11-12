@@ -20,6 +20,7 @@ export default function FicheLogement() {
 
   // Condition pour renvoyer l'utilisateur sur la page 404 si le logement n'as pas été trouvé
   // L'ordre de cette condition ici est importante pour déterminer si le logement a été trouvé
+  // On la place donc ligne ici ligne 24 avant le return ligne 28
   if (!currentLogement) {
     return <Navigate to="/error-404" />;
   }

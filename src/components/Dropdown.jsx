@@ -13,7 +13,7 @@ export default function Dropdown(props) {
         {props.title}
         <RiArrowDropDownLine className="dropdown-arrow text-[40px] cursor-pointer" />
       </div>
-      {/* .children ici est reconnu l38 fichelogement entre les deux balises dropdown*/}
+      {/* .children ici est reconnu l43 fichelogement entre les deux balises dropdown*/}
       {isActive && <div className="dropdown-value rounded-b-md px-4 py-2 bg-gray-200">{props.children}</div>}
     </div>
   );

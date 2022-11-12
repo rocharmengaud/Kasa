@@ -1,4 +1,5 @@
 import React from 'react';
+
 import bnw_logo from '../assets/kasa logo bnw.png';
 
 export default function Footer() {
