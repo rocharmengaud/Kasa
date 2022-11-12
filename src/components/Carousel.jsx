@@ -34,7 +34,7 @@ export default function Carousel(props) {
         return (
           <div className={index === current ? 'slide-active pb-4' : 'slide'} key={index}>
             {index === current && (
-              <img className="image h-[16rem] w-[21rem] lg:h-[38rem] lg:w-[103rem] object-cover rounded-3xl" src={slide} alt="" />
+              <img className="image h-[16rem] w-[61rem] lg:h-[38rem] lg:w-[103rem] object-cover rounded-3xl" src={slide} alt="" />
             )}
           </div>
         );
