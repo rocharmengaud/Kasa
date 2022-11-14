@@ -4,11 +4,14 @@ import { SlArrowRight, SlArrowLeft } from 'react-icons/sl';
 export default function Carousel(props) {
   const [current, setCurrent] = useState(0);
   const length = props.slides.length;
+  console.log(length);
 
   // utilisation d'un ternaire
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
+
+  console.log(current);
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
