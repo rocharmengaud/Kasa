@@ -5,6 +5,7 @@ export default function Carousel(props) {
   const [current, setCurrent] = useState(0);
   const length = props.slides.length;
 
+  // utilisation d'un ternaire
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
@@ -33,6 +34,8 @@ export default function Carousel(props) {
       {props.slides.map((slide, index) => {
         return (
           <div className={index === current ? 'slide-active pb-4' : 'slide'} key={index}>
+            {/* on met un if ici */}
+            {/* si on a la slide active alors on render l'image */}
             {index === current && (
               <img className="image h-[16rem] w-[61rem] lg:h-[38rem] lg:w-[103rem] object-cover rounded-3xl" src={slide} alt="" />
             )}
